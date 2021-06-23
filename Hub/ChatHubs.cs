@@ -1,14 +1,13 @@
 using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
-using SignalRChat.IHubs;
 using SignalRChat.IHubsMessage;
 using System;
 
 namespace SignalRChat.Hubs
 {
     
-    public class ChatHub : Hub<IChatHubs>
+    public class ChatHub : Hub
     {
         private readonly ILogger _logger;
         public ChatHub(ILogger<ChatHub> logger)
@@ -16,8 +15,11 @@ namespace SignalRChat.Hubs
             _logger = logger;
         }
 
-        public async Task Spam(ChatMessage message) {
-            await Clients.All.Spam(message);
+        public async Task AddToGrp(string slugUuidRoomName) {
+            Console.WriteLine("RECEIVED ON ADD GRP" + slugUuidRoomName);
+            await Groups.AddToGroupAsync(Context.ConnectionId, "TOTO");
+            await Clients.Group("TOTO").SendAsync("GrpMessage", "HELLO YOU ARE BVITCH");
+            Console.WriteLine("MESSAGE SEND TO THE ROOM " + "TOTO");
         }
 
         public override Task OnConnectedAsync()

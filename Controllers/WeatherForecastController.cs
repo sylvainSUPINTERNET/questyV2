@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
 using SignalRChat.Hubs;
-using SignalRChat.IHubs;
 using SignalRChat.IHubsMessage;
 
 namespace EasyTransfer.Controllers
@@ -22,9 +21,9 @@ namespace EasyTransfer.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        private readonly IHubContext<ChatHub, IChatHubs> _hubContext;
+        private readonly IHubContext<ChatHub> _hubContext;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IHubContext<ChatHub, IChatHubs> hub)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IHubContext<ChatHub> hub)
         {
             _logger = logger;
             _hubContext = hub;
@@ -34,10 +33,10 @@ namespace EasyTransfer.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
 
-            ChatMessage msg = new ChatMessage();
-            msg.User = "sylvain";
-            msg.Message = "BONJOUR";
-            this._hubContext.Clients.All.Spam(msg);
+            // ChatMessage msg = new ChatMessage();
+            // msg.User = "sylvain";
+            // msg.Message = "BONJOUR";
+            // this._hubContext.Clients.All.Spam(msg);
             
 
             var rng = new Random();

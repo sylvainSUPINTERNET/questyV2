@@ -13,8 +13,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using SignalRChat.Hubs;
 using Microsoft.AspNetCore.SignalR;
-using SignalRChat.IHubs;
 using SignalRChat.IHubsMessage;
+using services.RoomService;
+using interfaces.IRoom;
 
 namespace EasyTransfer
 {
@@ -31,6 +32,8 @@ namespace EasyTransfer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IRoom, RoomService>();
+
             services.AddSignalR();
             services.AddCors(options =>
             {

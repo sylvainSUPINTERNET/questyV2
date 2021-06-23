@@ -28,3 +28,14 @@ E:\playground\EasyTransfer\obj\Debug\net5.0\ref\EasyTransfer.dll
 E:\playground\EasyTransfer\obj\Debug\net5.0\EasyTransfer.pdb
 E:\playground\EasyTransfer\obj\Debug\net5.0\EasyTransfer.genruntimeconfig.cache
 E:\playground\EasyTransfer\bin\Debug\net5.0\libman.json
+E:\playground\EasyTransfer\bin\Debug\net5.0\BeetleX.dll
+E:\playground\EasyTransfer\bin\Debug\net5.0\BeetleX.Redis.dll
+E:\playground\EasyTransfer\bin\Debug\net5.0\BeetleX.Tracks.dll
+E:\playground\EasyTransfer\bin\Debug\net5.0\MessagePack.dll
+E:\playground\EasyTransfer\bin\Debug\net5.0\MessagePack.Annotations.dll
+E:\playground\EasyTransfer\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\playground\EasyTransfer\bin\Debug\net5.0\Newtonsoft.Json.dll
+E:\playground\EasyTransfer\bin\Debug\net5.0\protobuf-net.dll
+E:\playground\EasyTransfer\bin\Debug\net5.0\protobuf-net.Core.dll
+E:\playground\EasyTransfer\bin\Debug\net5.0\System.Text.Json.dll
+E:\playground\EasyTransfer\bin\Debug\net5.0\shortid.dll

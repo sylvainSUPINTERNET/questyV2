@@ -2,6 +2,77 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "BeetleX/1.6.5.62": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/BeetleX.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/BeetleX.dll": {}
+        }
+      },
+      "BeetleX.Redis/1.3.1": {
+        "type": "package",
+        "dependencies": {
+          "BeetleX": "1.6.5.62",
+          "BeetleX.Tracks": "0.7.5",
+          "MessagePack": "2.1.115",
+          "Newtonsoft.Json": "12.0.3",
+          "System.Text.Json": "5.0.2",
+          "protobuf-net": "3.0.101"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/BeetleX.Redis.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/BeetleX.Redis.dll": {}
+        }
+      },
+      "BeetleX.Tracks/0.7.5": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/BeetleX.Tracks.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/BeetleX.Tracks.dll": {}
+        }
+      },
+      "MessagePack/2.1.115": {
+        "type": "package",
+        "dependencies": {
+          "MessagePack.Annotations": "2.1.115",
+          "Microsoft.Bcl.AsyncInterfaces": "1.0.0",
+          "System.Memory": "4.5.3",
+          "System.Reflection.Emit": "4.6.0",
+          "System.Reflection.Emit.Lightweight": "4.6.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
+          "System.Threading.Tasks.Extensions": "4.5.3"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/MessagePack.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/MessagePack.dll": {}
+        }
+      },
+      "MessagePack.Annotations/2.1.115": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MessagePack.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MessagePack.Annotations.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        }
+      },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
         "type": "package",
         "build": {
@@ -20,6 +91,45 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "protobuf-net/3.0.101": {
+        "type": "package",
+        "dependencies": {
+          "protobuf-net.Core": "3.0.101"
+        },
+        "compile": {
+          "lib/net5.0/protobuf-net.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/protobuf-net.dll": {}
+        }
+      },
+      "protobuf-net.Core/3.0.101": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/protobuf-net.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/protobuf-net.Core.dll": {}
+        }
+      },
+      "shortid/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/shortid.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/shortid.dll": {}
         }
       },
       "Swashbuckle.AspNetCore/5.6.3": {
@@ -75,10 +185,162 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "System.Reflection.Emit/4.6.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.6.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Text.Json/5.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
       }
     }
   },
   "libraries": {
+    "BeetleX/1.6.5.62": {
+      "sha512": "wTd1z/LohK+7k3POv8e6rnNrBAjrYT337WTRP7OAE/Dqus/I+vdwQbmBwos17GonohQRWRNoZY+dw9vTvCXXGg==",
+      "type": "package",
+      "path": "beetlex/1.6.5.62",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "beetlex.1.6.5.62.nupkg.sha512",
+        "beetlex.nuspec",
+        "beetlex200.png",
+        "lib/net5.0/BeetleX.dll",
+        "lib/netcoreapp2.1/BeetleX.dll",
+        "lib/netcoreapp3.1/BeetleX.dll",
+        "lib/netstandard2.0/BeetleX.dll"
+      ]
+    },
+    "BeetleX.Redis/1.3.1": {
+      "sha512": "+sm2oTK1hAihPZ5llcaPDSkxNV+82HtsV29vVgTwEXciVurgqjhW672GZSyErAczpgWVnWTxGJqqsfsKUILCww==",
+      "type": "package",
+      "path": "beetlex.redis/1.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "beetlex.redis.1.3.1.nupkg.sha512",
+        "beetlex.redis.nuspec",
+        "beetlex200.png",
+        "lib/netcoreapp2.1/BeetleX.Redis.dll",
+        "lib/netcoreapp3.1/BeetleX.Redis.dll"
+      ]
+    },
+    "BeetleX.Tracks/0.7.5": {
+      "sha512": "OtAZsCCWKqrhRBKodeQLmzDK21AhD3seQLzQmsKAtqUi+FyIkevplAqjEiqNSz/9I4bW8TuGoWs2/o8h7d889w==",
+      "type": "package",
+      "path": "beetlex.tracks/0.7.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "beetlex.tracks.0.7.5.nupkg.sha512",
+        "beetlex.tracks.nuspec",
+        "beetlex200.png",
+        "lib/netcoreapp2.1/BeetleX.Tracks.dll",
+        "lib/netcoreapp3.1/BeetleX.Tracks.dll"
+      ]
+    },
+    "MessagePack/2.1.115": {
+      "sha512": "QLLsIPUSoS7j1b/1qf5EXhl6bMMDlYu8iqVO+yim+xtehE1lhAGhIkK/hdGwNT5M2niK1uJTuof29K7XGSHMWA==",
+      "type": "package",
+      "path": "messagepack/2.1.115",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netcoreapp2.1/MessagePack.dll",
+        "lib/netcoreapp2.1/MessagePack.xml",
+        "lib/netstandard2.0/MessagePack.dll",
+        "lib/netstandard2.0/MessagePack.xml",
+        "messagepack.2.1.115.nupkg.sha512",
+        "messagepack.nuspec"
+      ]
+    },
+    "MessagePack.Annotations/2.1.115": {
+      "sha512": "AZu+lE3/lImOpK0wnUwWWSds6YZCm7zX3ooViuezYJRRp9TIy+d1MgZPMEsyE+WL2Vt8IwP8GjsJI9soBiZ5zw==",
+      "type": "package",
+      "path": "messagepack.annotations/2.1.115",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/MessagePack.Annotations.dll",
+        "lib/netstandard2.0/MessagePack.Annotations.xml",
+        "messagepack.annotations.2.1.115.nupkg.sha512",
+        "messagepack.annotations.nuspec"
+      ]
+    },
+    "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
+      "sha512": "K63Y4hORbBcKLWH5wnKgzyn7TOfYzevIEwIedQHBIkmkEBA9SCqgvom+XTuE+fAFGvINGkhFItaZ2dvMGdT5iw==",
+      "type": "package",
+      "path": "microsoft.bcl.asyncinterfaces/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
+        "microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.nuspec",
+        "ref/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
       "sha512": "LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
       "type": "package",
@@ -121,6 +383,93 @@
         "lib/netstandard2.0/Microsoft.OpenApi.xml",
         "microsoft.openapi.1.2.3.nupkg.sha512",
         "microsoft.openapi.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "protobuf-net/3.0.101": {
+      "sha512": "mLm8VGfGylp9q+rbJDp3uw0BOeNzfGENecVz/EYGlzq3ss7tfajGXHCMoZm/GxJ9vSn9pcK22UXWZnQ5GJQMjA==",
+      "type": "package",
+      "path": "protobuf-net/3.0.101",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/protobuf-net.dll",
+        "lib/net461/protobuf-net.xml",
+        "lib/net5.0/protobuf-net.dll",
+        "lib/net5.0/protobuf-net.xml",
+        "lib/netcoreapp3.1/protobuf-net.dll",
+        "lib/netcoreapp3.1/protobuf-net.xml",
+        "lib/netstandard2.0/protobuf-net.dll",
+        "lib/netstandard2.0/protobuf-net.xml",
+        "lib/netstandard2.1/protobuf-net.dll",
+        "lib/netstandard2.1/protobuf-net.xml",
+        "protobuf-net.3.0.101.nupkg.sha512",
+        "protobuf-net.nuspec",
+        "protobuf-net.png"
+      ]
+    },
+    "protobuf-net.Core/3.0.101": {
+      "sha512": "gf9QIF0RlctfjmOjbE6eOyMulkNEsH7tHncjKj/4BTu9tkuTyrH3fv5I+35GnolJqKJ6fh9kYaezvNRL3t75+Q==",
+      "type": "package",
+      "path": "protobuf-net.core/3.0.101",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/protobuf-net.Core.dll",
+        "lib/net461/protobuf-net.Core.xml",
+        "lib/net5.0/protobuf-net.Core.dll",
+        "lib/net5.0/protobuf-net.Core.xml",
+        "lib/netcoreapp3.1/protobuf-net.Core.dll",
+        "lib/netcoreapp3.1/protobuf-net.Core.xml",
+        "lib/netstandard2.0/protobuf-net.Core.dll",
+        "lib/netstandard2.0/protobuf-net.Core.xml",
+        "lib/netstandard2.1/protobuf-net.Core.dll",
+        "lib/netstandard2.1/protobuf-net.Core.xml",
+        "protobuf-net.core.3.0.101.nupkg.sha512",
+        "protobuf-net.core.nuspec",
+        "protobuf-net.png"
+      ]
+    },
+    "shortid/3.0.1": {
+      "sha512": "0zZJTXVQ1KxUZfmoiplI0A2sgjKyWbpw/5J9GVo+gO6G+oF7a8cnd9woRUZbtPZ6uu+E5u7knT61PIe1tST/YA==",
+      "type": "package",
+      "path": "shortid/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.0/shortid.dll",
+        "shortid.3.0.1.nupkg.sha512",
+        "shortid.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/5.6.3": {
@@ -185,11 +534,220 @@
         "swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "System.Memory/4.5.3": {
+      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "type": "package",
+      "path": "system.memory/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Reflection.Emit/4.6.0": {
+      "sha512": "qAo4jyXtC9i71iElngX7P2r+zLaiHzxKwf66sc3X91tL5Ks6fnQ1vxL04o7ZSm3sYfLExySL7GN8aTpNYpU1qw==",
+      "type": "package",
+      "path": "system.reflection.emit/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/monoandroid10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Reflection.Emit.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Reflection.Emit.dll",
+        "lib/netstandard1.1/System.Reflection.Emit.xml",
+        "lib/netstandard1.3/System.Reflection.Emit.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.xml",
+        "lib/netstandard2.1/_._",
+        "lib/xamarinmac20/_._",
+        "ref/monoandroid10/_._",
+        "ref/net45/_._",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Reflection.Emit.dll",
+        "ref/netstandard1.1/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/de/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/es/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/fr/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/it/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ja/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ko/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ru/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/zh-hans/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/zh-hant/System.Reflection.Emit.xml",
+        "ref/netstandard2.0/System.Reflection.Emit.dll",
+        "ref/netstandard2.0/System.Reflection.Emit.xml",
+        "ref/netstandard2.1/_._",
+        "ref/xamarinmac20/_._",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.dll",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.xml",
+        "system.reflection.emit.4.6.0.nupkg.sha512",
+        "system.reflection.emit.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Reflection.Emit.Lightweight/4.6.0": {
+      "sha512": "j/V5HVvxvBQ7uubYD0PptQW2KGsi1Pc2kZ9yfwLixv3ADdjL/4M78KyC5e+ymW612DY8ZE4PFoZmWpoNmN2mqg==",
+      "type": "package",
+      "path": "system.reflection.emit.lightweight/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Reflection.Emit.Lightweight.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Reflection.Emit.Lightweight.dll",
+        "lib/netstandard1.0/System.Reflection.Emit.Lightweight.xml",
+        "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.Lightweight.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.Lightweight.xml",
+        "lib/netstandard2.1/_._",
+        "lib/portable-net45+wp8/_._",
+        "lib/wp80/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll",
+        "ref/netstandard1.0/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/de/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/es/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/fr/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/it/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/ja/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/ko/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/ru/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/zh-hans/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/zh-hant/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard2.0/System.Reflection.Emit.Lightweight.dll",
+        "ref/netstandard2.0/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard2.1/_._",
+        "ref/portable-net45+wp8/_._",
+        "ref/wp80/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.Lightweight.dll",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.Lightweight.xml",
+        "system.reflection.emit.lightweight.4.6.0.nupkg.sha512",
+        "system.reflection.emit.lightweight.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Text.Json/5.0.2": {
+      "sha512": "I47dVIGiV6SfAyppphxqupertT/5oZkYLDCX6vC3HpOI4ZLjyoKAreUoem2ie6G0RbRuFrlqz/PcTQjfb2DOfQ==",
+      "type": "package",
+      "path": "system.text.json/5.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Text.Json.dll",
+        "lib/net461/System.Text.Json.xml",
+        "lib/netcoreapp3.0/System.Text.Json.dll",
+        "lib/netcoreapp3.0/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.5.0.2.nupkg.sha512",
+        "system.text.json.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Threading.Tasks.Extensions/4.5.3": {
+      "sha512": "+MvhNtcvIbqmhANyKu91jQnvIRVSTiaOiFNfKWwXGHG48YAb4I/TyH8spsySiPYla7gKal5ZnF3teJqZAximyQ==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.3.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Swashbuckle.AspNetCore >= 5.6.3"
+      "BeetleX.Redis >= 1.3.1",
+      "Swashbuckle.AspNetCore >= 5.6.3",
+      "shortid >= 3.0.1"
     ]
   },
   "packageFolders": {
@@ -229,9 +787,17 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "BeetleX.Redis": {
+            "target": "Package",
+            "version": "[1.3.1, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[5.6.3, )"
+          },
+          "shortid": {
+            "target": "Package",
+            "version": "[3.0.1, )"
           }
         },
         "imports": [
