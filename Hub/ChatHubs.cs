@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using SignalRChat.IHubsMessage;
 using System;
+using System.Threading;
 
 namespace SignalRChat.Hubs
 {
@@ -18,8 +19,11 @@ namespace SignalRChat.Hubs
         public async Task AddToGrp(string slugUuidRoomName) {
             Console.WriteLine("RECEIVED ON ADD GRP" + slugUuidRoomName);
             await Groups.AddToGroupAsync(Context.ConnectionId, "TOTO");
-            await Clients.Group("TOTO").SendAsync("GrpMessage", "HELLO YOU ARE BVITCH");
             Console.WriteLine("MESSAGE SEND TO THE ROOM " + "TOTO");
+        }
+
+        public async Task SendToGroup(string msg) {
+            await Clients.Group("TOTO").SendAsync("grpMessage", msg);
         }
 
         public override Task OnConnectedAsync()

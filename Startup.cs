@@ -35,6 +35,11 @@ namespace EasyTransfer
             services.AddSingleton<IRoom, RoomService>();
 
             services.AddSignalR();
+            services.AddSignalR(hubOptions =>{    
+                // Since we send "big" data we need to set to null means "infinite" ... else using chunk process
+                hubOptions.MaximumReceiveMessageSize = null;
+            });
+
             services.AddCors(options =>
             {
                 options.AddPolicy("ClientPermission", policy =>
