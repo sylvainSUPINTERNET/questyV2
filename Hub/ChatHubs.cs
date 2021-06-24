@@ -26,6 +26,10 @@ namespace SignalRChat.Hubs
             await Clients.Group("TOTO").SendAsync("grpMessage", msg);
         }
 
+        public async Task SendFileToGroup(string b64File) {
+            await Clients.Group("TOTO").SendAsync("grpFile", b64File);
+        }
+
         public override Task OnConnectedAsync()
         {
 
