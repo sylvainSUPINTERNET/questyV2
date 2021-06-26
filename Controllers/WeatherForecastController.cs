@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
 using SignalRChat.Hubs;
 using SignalRChat.IHubsMessage;
+using StackExchange.Redis;
 
 namespace EasyTransfer.Controllers
 {
@@ -20,18 +21,25 @@ namespace EasyTransfer.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IConnectionMultiplexer _redis;
 
         private readonly IHubContext<ChatHub> _hubContext;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IHubContext<ChatHub> hub)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IHubContext<ChatHub> hub, IConnectionMultiplexer redis)
         {
             _logger = logger;
             _hubContext = hub;
+            _redis=redis;
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+
+            var db = this._redis.GetDatabase();
+            var pong = db.Ping();
+            Console.WriteLine(pong);
+
 
             // ChatMessage msg = new ChatMessage();
             // msg.User = "sylvain";

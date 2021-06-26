@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.SignalR;
 using SignalRChat.IHubsMessage;
 using services.RoomService;
 using interfaces.IRoom;
+using StackExchange.Redis;
 
 namespace EasyTransfer
 {
@@ -32,6 +33,13 @@ namespace EasyTransfer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+                //Configure other services up here
+            var multiplexer = ConnectionMultiplexer.Connect(
+            new ConfigurationOptions{
+                EndPoints = {"localhost:6379"}                
+            });
+            
+            services.AddSingleton<IConnectionMultiplexer>(multiplexer);
             services.AddSingleton<IRoom, RoomService>();
 
             services.AddSignalR();

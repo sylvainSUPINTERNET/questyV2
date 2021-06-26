@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using SignalRChat.IHubsMessage;
 using System;
 using System.Threading;
+using wsDto.ResponseMessage;
 
 namespace SignalRChat.Hubs
 {
@@ -11,23 +12,26 @@ namespace SignalRChat.Hubs
     public class ChatHub : Hub
     {
         private readonly ILogger _logger;
+
         public ChatHub(ILogger<ChatHub> logger)
         {
             _logger = logger;
         }
 
         public async Task AddToGrp(string slugUuidRoomName) {
-            Console.WriteLine("RECEIVED ON ADD GRP" + slugUuidRoomName);
-            await Groups.AddToGroupAsync(Context.ConnectionId, "TOTO");
-            Console.WriteLine("MESSAGE SEND TO THE ROOM " + "TOTO");
+            this._logger.LogDebug($" New connection {Context.ConnectionId} joins roomId : {slugUuidRoomName}");
+            await Groups.AddToGroupAsync(Context.ConnectionId, slugUuidRoomName);
         }
 
-        public async Task SendToGroup(string msg) {
-            await Clients.Group("TOTO").SendAsync("grpMessage", msg);
+        public async Task SendToGroup(string msg, string roomId) {
+            this._logger.LogDebug("Send message to room Id : " + roomId);
+            ResponseMessage responseMessage = new ResponseMessage(){Message=msg, SenderId=Context.ConnectionId};
+            await Clients.Group(roomId).SendAsync("grpMessage",responseMessage);
         }
 
-        public async Task SendFileToGroup(string b64File) {
-            await Clients.Group("TOTO").SendAsync("grpFile", b64File);
+        public async Task SendFileToGroup(string b64File, string roomId) {
+            this._logger.LogDebug("Upload file to room Id : " + roomId);
+            await Clients.Group(roomId).SendAsync("grpFile", b64File);
         }
 
         public override Task OnConnectedAsync()
