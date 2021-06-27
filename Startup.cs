@@ -33,10 +33,12 @@ namespace EasyTransfer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
                 //Configure other services up here
             var multiplexer = ConnectionMultiplexer.Connect(
             new ConfigurationOptions{
-                EndPoints = {"localhost:6379"}                
+                EndPoints = {"localhost:6379"},
+                ResolveDns = true         
             });
             
             services.AddSingleton<IConnectionMultiplexer>(multiplexer);
